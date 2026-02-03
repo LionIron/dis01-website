@@ -167,3 +167,43 @@ a:focus{
 .lsbaih_footer{
   opacity: 0.95;
 }
+
+/* Interaktives, animiertes Element (Akkordeon) – CSS-only */
+.lsbaih_accordionGroup{
+  display: grid;
+  gap: 0.6rem;
+}
+
+.lsbaih_accordion{
+  background: rgba(2,6,23,0.35);
+  border-radius: var(--lsbaih_radius);
+  padding: 0.2rem 0.7rem;
+}
+
+.lsbaih_accordion > summary{
+  cursor: pointer;
+  padding: 0.6rem 0;
+  font-weight: 600;
+}
+
+/* Marker ausblenden (Browser-spezifisch) */
+.lsbaih_accordion > summary::-webkit-details-marker{
+  display: none;
+}
+
+/* Animation über Grid-Row-Trick */
+.lsbaih_accordionInner{
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.25s ease;
+}
+
+.lsbaih_accordion[open] .lsbaih_accordionInner{
+  grid-template-rows: 1fr;
+}
+
+.lsbaih_accordionInner > div{
+  overflow: hidden;
+  padding-bottom: 0.7rem;
+}
+
