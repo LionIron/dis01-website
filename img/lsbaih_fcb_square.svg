@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600" role="img" aria-label="FC Bayern Platzhalterbild quadratisch">
+  <rect width="600" height="600" fill="#111827"/>
+  <circle cx="300" cy="260" r="150" fill="#b91c1c"/>
+  <circle cx="300" cy="260" r="115" fill="#ffffff" opacity="0.95"/>
+  <text x="300" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" fill="#ffffff">FC Bayern</text>
+  <text x="300" y="515" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#93c5fd">Platzhalter (lokal)</text>
+</svg>
