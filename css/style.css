@@ -1,0 +1,157 @@
+/* lsbaih_ Projekt-CSS (Screen) */
+
+:root{
+  --lsbaih_bg: #0f172a;
+  --lsbaih_fg: #e5e7eb;
+  --lsbaih_card: #111827;
+  --lsbaih_accent: #b91c1c;
+  --lsbaih_accent2: #f59e0b;
+  --lsbaih_link: #93c5fd;
+  --lsbaih_max: 70rem;
+  --lsbaih_gap: 1rem;
+  --lsbaih_radius: 0.75rem;
+}
+
+*{ box-sizing: border-box; }
+
+html{
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body{
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  background-image: linear-gradient(180deg, var(--lsbaih_bg), #020617);
+  color: var(--lsbaih_fg);
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: auto;
+}
+
+/* Grundlayout: Grid */
+.lsbaih_nav,
+.lsbaih_header,
+.lsbaih_main,
+.lsbaih_aside,
+.lsbaih_footer{
+  width: min(100%, var(--lsbaih_max));
+  margin: 0 auto;
+  padding: calc(var(--lsbaih_gap) * 1.1);
+}
+
+/* Navigation als Buttons (Flex + Hover + Transition) */
+.lsbaih_menu{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.lsbaih_menuLink{
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.6rem 0.9rem;
+  border-radius: var(--lsbaih_radius);
+  background: var(--lsbaih_accent);
+  color: white;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.lsbaih_menuLink:hover,
+.lsbaih_menuLink:focus{
+  background: var(--lsbaih_accent2);
+  transform: translateY(-0.08rem);
+}
+
+/* Header */
+.lsbaih_header{
+  background: rgba(17,24,39,0.65);
+  border-radius: var(--lsbaih_radius);
+}
+
+/* Main: Grid mehrspaltig ohne viele Media Queries */
+.lsbaih_main{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: var(--lsbaih_gap);
+}
+
+.lsbaih_section,
+.lsbaih_aside{
+  background: rgba(17,24,39,0.75);
+  border-radius: var(--lsbaih_radius);
+  padding: 1rem;
+}
+
+/* figure als optischer Block; float ist Pflicht -> wir nutzen es gezielt */
+.lsbaih_figure{
+  margin: 0 0 0.8rem 0;
+  padding: 0.9rem;
+  border-radius: var(--lsbaih_radius);
+  background-image: linear-gradient(135deg, rgba(185,28,28,0.35), rgba(245,158,11,0.18));
+  float: none;
+}
+
+.lsbaih_figcaption{
+  font-weight: 600;
+}
+
+.lsbaih_h1{
+  font-size: 1.6rem;
+  margin: 0 0 0.3rem 0;
+}
+
+.lsbaih_h2{
+  font-size: 1.15rem;
+  margin: 0.6rem 0 0.3rem 0;
+}
+
+.lsbaih_text{
+  margin: 0.5rem 0;
+}
+
+a{
+  color: var(--lsbaih_link);
+}
+
+a:focus{
+  outline: 0.15rem solid var(--lsbaih_accent2);
+  outline-offset: 0.15rem;
+}
+
+.lsbaih_table{
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.8rem 0;
+  font-size: 0.95rem;
+}
+
+.lsbaih_table th,
+.lsbaih_table td{
+  border: 0.08rem solid rgba(229,231,235,0.25);
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.lsbaih_caption{
+  text-align: left;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+/* Details */
+.lsbaih_details{
+  margin-top: 0.7rem;
+  background: rgba(2,6,23,0.35);
+  border-radius: var(--lsbaih_radius);
+  padding: 0.7rem;
+}
+
+/* Footer */
+.lsbaih_footer{
+  opacity: 0.95;
+}

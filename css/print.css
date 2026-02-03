@@ -1,0 +1,52 @@
+/* lsbaih_ Print-Stylesheet */
+
+@media print{
+  *{
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body{
+    background: white !important;
+    color: black !important;
+    font-family: serif;
+    line-height: 1.4;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  /* Navigation im Druck ausblenden */
+  .lsbaih_nav{
+    display: none !important;
+  }
+
+  /* Layout vereinfachen */
+  .lsbaih_main{
+    display: block !important;
+  }
+
+  .lsbaih_header,
+  .lsbaih_section,
+  .lsbaih_aside,
+  .lsbaih_footer{
+    background: transparent !important;
+    border: 0.06rem solid #ccc;
+    border-radius: 0;
+    padding: 0.8rem;
+    margin: 0 0 0.8rem 0;
+  }
+
+  a{
+    color: black !important;
+    text-decoration: underline;
+  }
+
+  /* Seitenumbruch-Optimierung */
+  h1, h2{
+    page-break-after: avoid;
+  }
+
+  table{
+    page-break-inside: avoid;
+  }
+}
