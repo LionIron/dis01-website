@@ -1,5 +1,14 @@
 /* lsbaih_ Projekt-CSS (Screen) */
 
+@font-face{
+  font-family: "lsbaih_head";
+  src: url("../fonts/lsbaih_headings.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 :root{
   --lsbaih_bg: #0f172a;
   --lsbaih_fg: #e5e7eb;
@@ -101,14 +110,17 @@ body{
 }
 
 .lsbaih_h1{
+  font-family: "lsbaih_head", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   font-size: 1.6rem;
   margin: 0 0 0.3rem 0;
 }
 
 .lsbaih_h2{
+  font-family: "lsbaih_head", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   font-size: 1.15rem;
   margin: 0.6rem 0 0.3rem 0;
 }
+
 
 .lsbaih_text{
   margin: 0.5rem 0;
